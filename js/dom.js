@@ -7,8 +7,8 @@ const toValue = document.getElementById("toValue");
 
 const runTranslation = () => {
     toValue.value === "toMorse"
-        ? (outputBox.value = toMorse(translateBox.value.trim()))
-        : (outputBox.value = toEnglish(translateBox.value.trim()));
+        ? (outputBox.value = toMorse(translateBox.value))
+        : (outputBox.value = toEnglish(translateBox.value));
 };
 
 translateButton.addEventListener("click", runTranslation);

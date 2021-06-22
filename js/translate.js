@@ -46,11 +46,11 @@ export const toMorse = (inputStr) => {
     const morseArr = inputStr
         .toLowerCase()
         .split("")
-        .map((char) => getMorseValue(char) + " ");
-    if (morseArr.includes("undefined ")) {
+        .map((char) => getMorseValue(char));
+    if (morseArr.includes(undefined)) {
         return "Contains undefined characters";
     }
-    return morseArr.join("");
+    return morseArr.join(" ");
 };
 
 const getEnglishKey = (value) => {
